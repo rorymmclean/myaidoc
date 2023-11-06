@@ -28,10 +28,12 @@ SECRET_KEY = st.secrets["aws_secret_access_key"]
 
 client = boto3.client('bedrock',
     aws_access_key_id=ACCESS_KEY,
-    aws_secret_access_key=SECRET_KEY)
+    aws_secret_access_key=SECRET_KEY,
+    region_name='us-east-1')
 bedrockrt = boto3.client('bedrock-runtime',
     aws_access_key_id=ACCESS_KEY,
-    aws_secret_access_key=SECRET_KEY)
+    aws_secret_access_key=SECRET_KEY,
+    region_name='us-east-1')
 
 module_path = ".."
 sys.path.append(os.path.abspath(module_path))
