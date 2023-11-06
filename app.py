@@ -24,7 +24,10 @@ langchain.llm_cache = SQLiteCache(database_path="langchain.db")
 pinecone_api_key = st.secrets["pinecone_api_key"]
 pinecone_environment = st.secrets["pinecone_environment"]
 ACCESS_KEY = st.secrets["aws_access_key_id"]
+os.environ["AWS_ACCESS_KEY_ID"] = ACCESS_KEY
 SECRET_KEY = st.secrets["aws_secret_access_key"]
+os.environ["AWS_SECRET_ACCESS_KEY"]=SECRET_KEY
+os.environ["AWS_DEFAULT_REGION"]='us-east-1'
 
 client = boto3.client('bedrock',
     aws_access_key_id=ACCESS_KEY,
@@ -41,7 +44,7 @@ from utils import bedrock
 
 boto3_bedrock = bedrock.get_bedrock_client(
     assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
-    region=os.environ.get("AWS_DEFAULT_REGION", 'us-east-1'),
+    region=os.environ.get("AWS_DEFAULT_REGION", None),
 )
 model_E = 'amazon.titan-embed-text-v1'
 model_L = "anthropic.claude-v2"
