@@ -21,7 +21,6 @@ langchain.llm_cache = SQLiteCache(database_path="langchain.db")
 
 
 ### --- Housekeeping ---
-openai_api_key = st.secrets["OPENAI_API_KEY"]
 pinecone_api_key = st.secrets["pinecone_api_key"]
 pinecone_environment = st.secrets["pinecone_environment"]
 ACCESS_KEY = st.secrets["aws_access_key_id"]
