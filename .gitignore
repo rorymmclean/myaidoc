@@ -1,0 +1,5 @@
+.streamlit/secrets.toml
+langchain.db
+content/*
+pinecone.ipynb
+.ipynb_checkpoints

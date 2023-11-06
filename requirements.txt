@@ -1,0 +1,4 @@
+langchain
+streamlit
+boto3
+pinecone
