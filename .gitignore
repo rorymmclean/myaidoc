@@ -3,3 +3,5 @@ langchain.db
 content/*
 pinecone.ipynb
 .ipynb_checkpoints
+Documents/*
+content/*

@@ -152,7 +152,7 @@ col2.title('Interactive Document Application')
 st.markdown('---')
 ## Add a sidebar
 with st.sidebar: 
-    mydemo = st.selectbox('Select Document', ['OMB_Memo', 'Blueprint', 'NIST'])
+    mydemo = st.selectbox('Select Document', ['OMB_Memo', 'Blueprint', 'NIST', 'Lead_in_DS', 'ML_Business', 'ML_Bookcamp', 'Data_Mesh'])
     st.markdown("---")
     tz = st.container()
 
