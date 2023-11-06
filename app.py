@@ -41,7 +41,7 @@ from utils import bedrock
 
 boto3_bedrock = bedrock.get_bedrock_client(
     assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
-    region=os.environ.get("AWS_DEFAULT_REGION", None),
+    region=os.environ.get("AWS_DEFAULT_REGION", 'us-east-1'),
 )
 model_E = 'amazon.titan-embed-text-v1'
 model_L = "anthropic.claude-v2"
